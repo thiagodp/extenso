@@ -93,7 +93,15 @@ class Extenso {
 	}
 	
 	
-
+	/**
+	 *  Retorna um valor por extenso.
+	 *  
+	 *  @param	double	$valor	Valor a ser retornado por extenso.
+	 *  @param	int		$estilo	Estilo do valor por extenso:
+	 *  					MOEDA, NUMERO_MASCULINO ou NUMERO_FEMININO.
+	 *  
+	 *  @return string
+	 */
 	function extenso( $valor = 0.0, $estilo = 0 ) {
 		
 		$moeda = self::MOEDA == $estilo;
