@@ -96,8 +96,6 @@ class Extenso {
 
 	function extenso( $valor = 0.0, $estilo = 0 ) {
 		
-		//echo '<br />', $valor, ' = ';
-		
 		$moeda = self::MOEDA == $estilo;
 		$masculino = $moeda || self::NUMERO_MASCULINO == $estilo;
 		
@@ -247,7 +245,6 @@ class Extenso {
 		
 	
 	function sentencaParteFracionaria( $valor, $moeda, $masculino ) {
-		//echo '<br />', 'Frac -> ', $valor, '<br />';
 		
 		$fracao = $valor;
 		if ( $moeda ) {
@@ -296,59 +293,5 @@ class Extenso {
 	}	
 
 }
-
-/*
-$estilo = Extenso::NUMERO_MASCULINO;
-//$estilo = Extenso::NUMERO_FEMININO;
-//$estilo = Extenso::MOEDA;
-
-$ext = new Extenso();
-
-echo '<br />', $ext->extenso( 0, $estilo );
-echo '<br />', $ext->extenso( 1 , $estilo );
-echo '<br />', $ext->extenso( 10 , $estilo );
-echo '<br />', $ext->extenso( 19 , $estilo );
-echo '<br />', $ext->extenso( 20 , $estilo );
-echo '<br />', $ext->extenso( 99 , $estilo );
-echo '<br />', $ext->extenso( 100 , $estilo );
-echo '<br />', $ext->extenso( 101 , $estilo );
-echo '<br />', $ext->extenso( 999 , $estilo );
-echo '<br />', $ext->extenso( 1000 , $estilo );
-echo '<br />', $ext->extenso( 1001 , $estilo );
-echo '<br />', $ext->extenso( 1999 , $estilo );
-echo '<br />', $ext->extenso( 2000 , $estilo );
-echo '<br />', $ext->extenso( 2001 , $estilo );
-echo '<br />', $ext->extenso( 9999 , $estilo );
-echo '<br />', $ext->extenso( 10000 , $estilo );
-echo '<br />', $ext->extenso( 10100 , $estilo );
-echo '<br />', $ext->extenso( 100000 , $estilo );
-echo '<br />', $ext->extenso( 999999 , $estilo );
-echo '<br />', $ext->extenso( 9999999 , $estilo );
-echo '<br />', $ext->extenso( 999999999 , $estilo );
-echo '<br />', $ext->extenso( 999999999999 , $estilo );
-echo '<br />', $ext->extenso( 900000000000 , $estilo );
-echo '<br />', $ext->extenso( 900000000001 , $estilo );
-echo '<br />', $ext->extenso( 100100100100 , $estilo );
-echo '<br />', $ext->extenso( 100100100101 , $estilo );
-echo '<br />', $ext->extenso( 101101101101 , $estilo );
-echo '<br />', $ext->extenso( 101101101101 , $estilo );
-echo '<br />', $ext->extenso( 4025800 , $estilo );
-
-echo '<br />';
-echo '<br />', $ext->extenso( 1.1 , $estilo );
-echo '<br />', $ext->extenso( 1.01 , $estilo );
-echo '<br />', $ext->extenso( 1.98 , $estilo );
-echo '<br />', $ext->extenso( 1.99 , $estilo );
-echo '<br />', $ext->extenso( 1.998 , $estilo );
-echo '<br />', $ext->extenso( 1.999 , $estilo );
-echo '<br />', $ext->extenso( 4025800.99 , $estilo );
-echo '<br />', $ext->extenso( 1.001 , $estilo );
-echo '<br />', $ext->extenso( 1.495 , $estilo );
-echo '<br />', $ext->extenso( 8.056 , $estilo );
-echo '<br />', $ext->extenso( 0.03380 , $estilo );
-echo '<br />', $ext->extenso( 0.033801 , $estilo );
-echo '<br />', $ext->extenso( 1001.001 , $estilo );
-echo '<br />', $ext->extenso( 0.321 , $estilo );
-*/
 
 ?>
