@@ -1,0 +1,24 @@
+{
+	"name": "phputil/extenso",
+	"type": "library",
+	"description": "Conversão de valores por extenso PHP",
+	"keywords": [ "extenso", "valor", "valores" ],
+	"homepage": "http://github.com/thiagodp/extenso",
+	"license": "LGPL-3",
+	"authors": [ { "name": "Thiago Delgado Pinto" } ],
+	"support": {
+		"issues": "https://github.com/thiagodp/extenso/issues",
+		"source": "https://github.com/thiagodp/extenso"
+	},
+	"require": {
+		"php": ">=5.4"
+	},
+	"require-dev": {
+        "phpunit/phpunit": ">=4.0"
+    },	
+	"suggest": {
+	},
+	"autoload": {
+		"psr-4": { "phputil\\di\\": "lib/" }
+	}
+}
