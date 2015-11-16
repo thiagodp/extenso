@@ -19,6 +19,6 @@
 	"suggest": {
 	},
 	"autoload": {
-		"psr-4": { "phputil\\di\\": "lib/" }
+		"psr-4": { "phputil\\extenso\\": "lib/" }
 	}
 }
