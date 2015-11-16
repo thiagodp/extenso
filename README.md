@@ -4,7 +4,7 @@ Conversão de valores por extenso em PHP
 
 [![Build Status](https://travis-ci.org/thiagodp/extenso.svg?branch=master)](https://travis-ci.org/thiagodp/extenso)
 
-Current [version](http://semver.org/): `0.1` (_not production-ready yet, but usable_)
+Current [version](http://semver.org/): `0.1` 
 
 ### ESTILOS ACEITOS
  
@@ -14,7 +14,8 @@ Current [version](http://semver.org/): `0.1` (_not production-ready yet, but usa
  NUMERO_MASCULINO	| 1001    | mil e um
  NUMERO_FEMININO	| 1001    | mil e uma
    
- ### EXEMPLOS DE USO
+
+###  EXEMPLOS DE USO
  
  ```php
  $e = new \phputil\extenso\Extenso();
@@ -30,7 +31,7 @@ Current [version](http://semver.org/): `0.1` (_not production-ready yet, but usa
  $e->extenso( 4025800.99 );
  ```
  
- ### OBSERVAÇÕES
+### OBSERVAÇÕES
  
  * Suporta números até a casa dos vigesilhões.
  * Suporta casas decimais até vigesilões.
