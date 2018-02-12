@@ -4,7 +4,7 @@
 	"description": "Conversão de valores por extenso PHP",
 	"keywords": [ "extenso", "valor", "valores" ],
 	"homepage": "http://github.com/thiagodp/extenso",
-	"license": "LGPL-3",
+	"license": "LGPL-3.0-or-later",
 	"authors": [ { "name": "Thiago Delgado Pinto" } ],
 	"support": {
 		"issues": "https://github.com/thiagodp/extenso/issues",
