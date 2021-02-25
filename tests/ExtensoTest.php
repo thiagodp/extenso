@@ -46,6 +46,21 @@ class ExtensoTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals( 'mil e um reais e novecentos e noventa e nove milésimos', $r );
 	}
 
+	function test_milhares() {
+		$r = $this->e->extenso( 961637, Extenso::NUMERO_MASCULINO );
+		$this->assertEquals( 'novecentos e sessenta e um mil seiscentos e trinta e sete', $r );
+
+		$r = $this->e->extenso( 499999.00, Extenso::MOEDA );
+		$this->assertEquals( 'quatrocentos e noventa e nove mil novecentos e noventa e nove reais', $r );
+		$r = $this->e->extenso( 499999.00, Extenso::NUMERO_MASCULINO );
+		$this->assertEquals( 'quatrocentos e noventa e nove mil novecentos e noventa e nove', $r );
+
+		$r = $this->e->extenso( 499999.99, Extenso::MOEDA );
+		$this->assertEquals( 'quatrocentos e noventa e nove mil novecentos e noventa e nove reais e noventa e nove centavos', $r );
+		$r = $this->e->extenso( 499999.99, Extenso::NUMERO_MASCULINO );
+		$this->assertEquals( 'quatrocentos e noventa e nove mil novecentos e noventa e nove e noventa e nove centésimos', $r );
+	}
+
 	function test_milhoes() {
 		$r = $this->e->extenso( 4025800.99, Extenso::MOEDA );
 		$this->assertEquals( 'quatro milhões vinte e cinco mil oitocentos reais e noventa e nove centavos', $r );

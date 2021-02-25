@@ -44,8 +44,8 @@ class Extenso {
 
 	function __construct() {
 
-		$this->virgula = 'vírgula';
-		$this->separador = ''; // ',' -> vírgula não deve ser utilizado como separador
+		$this->virgula = 'e'; // 'vírgula' trocado por 'e'
+		$this->separador = ''; // ',' -> símbolo de vírgula não deve ser utilizado como separador
 		$this->conector = 'e';
 
 		$this->centavoSingular = 'centavo';
@@ -171,19 +171,14 @@ class Extenso {
 		}
 
 		$sentenca = '';
-		if ( 2 === count( $partes ) ) {
+
+		$cnt = mb_strlen( $valor );
+		if ( $cnt >= 3 && '0' === mb_substr( $valor, $cnt - 3, 1 ) ) {
 			$sentenca = implode( ' ' . $this->conector . ' ', $partes );
 		} else {
-			$sentenca = implode( $this->separador . ' ', $partes );
-			$ultimoSeparador = mb_strrpos( $sentenca, $this->separador );
-			if ( $ultimoSeparador !== false ) {
-				$antes = mb_substr( $sentenca, 0, $ultimoSeparador );
-				$depois = mb_substr( $sentenca, $ultimoSeparador + 1 );
-				// O conector "e" deve ser utilizado apenas para separar as casas decimais (não as demais)
-				// $sentenca = $antes .  ' ' . $this->conector . $depois;
-				$sentenca = $antes . ' ' . $depois;
-			}
+			$sentenca = implode( ' ', $partes );
 		}
+
 		$sentenca = $this->corrigir( $sentenca, $valor );
 
 		// Moeda
@@ -221,9 +216,9 @@ class Extenso {
 
 		$extenso = $masculino ? $this->trioExtensoM : $this->trioExtensoF;
 
-		$c = $trio[ 0 ];
-		$d = $trio[ 1 ];
-		$u = $trio[ 2 ];
+		$c = $trio[ 0 ]; // centena
+		$d = $trio[ 1 ]; // dezena
+		$u = $trio[ 2 ]; // unidade
 
 		$partes = array();
 
