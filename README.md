@@ -1,6 +1,6 @@
 # extenso
 
-Conversão de valores por extenso em PHP (>= 5.4)
+Conversão de valores por extenso em PHP (>= 5.6)
 
 [![Build Status](https://travis-ci.org/thiagodp/extenso.svg?branch=master)](https://travis-ci.org/thiagodp/extenso)
 
