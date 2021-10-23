@@ -18,7 +18,9 @@ Usamos [versionamento semâtico](http://semver.org/). Veja nossos [releases](htt
 ## Exemplos
 
 ```php
-$e = new \phputil\extenso\Extenso();
+use phputil\extenso\Extenso;
+
+$e = new Extenso();
 $e->extenso( 1001 ); // mil e um reais
 $e->extenso( 1001, Extenso::MOEDA ); // mil e um reais
 $e->extenso( 1001, Extenso::NUMERO_MASCULINO ); // mil e um
