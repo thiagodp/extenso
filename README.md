@@ -1,12 +1,26 @@
+[![Build Status](https://travis-ci.org/thiagodp/extenso.svg?branch=master&style=flat)](https://travis-ci.org/thiagodp/extenso)
+[![Version](https://poser.pugx.org/phputil/extenso/v?style=flat-square)](https://packagist.org/packages/phputil/extenso)
+[![Downloads](https://poser.pugx.org/phputil/extenso/downloads?style=flat-square)](https://packagist.org/packages/phputil/extenso)
+
+
 # extenso
 
-Conversão de valores por extenso em PHP (>= 5.4)
+> Conversão de valores por extenso em PHP (>= 5.4)
 
-[![Build Status](https://travis-ci.org/thiagodp/extenso.svg?branch=master)](https://travis-ci.org/thiagodp/extenso)
+- Suporta _números_ até a casa dos vigesilhões.
+- Suporta _casas decimais_ até vigesilhões.
+- Verificado com testes automatizados.
+- Usa [Versionamento Semâtico](http://semver.org/).
 
-Usamos [versionamento semâtico](http://semver.org/). Veja nossos [releases](https://github.com/thiagodp/extenso/releases).
+## Instalação
 
-## Estilos aceitos
+```bash
+composer require phputil/extenso
+```
+
+## Documentação
+
+Estilos aceitos:
 
  Estilo				| Exemplo | Saída
  -------------------|---------|-----------------
@@ -15,7 +29,7 @@ Usamos [versionamento semâtico](http://semver.org/). Veja nossos [releases](htt
  NUMERO_FEMININO	| 1001    | mil e uma
 
 
-## Exemplos
+### Exemplos
 
 ```php
 use phputil\extenso\Extenso;
@@ -33,10 +47,15 @@ $e->extenso( 1001.001 ); // mil e um reais e um milésimo
 $e->extenso( 4025800.99 );
 ```
 
-## OBSERVAÇÕES
+## Outras
 
- * Suporta _números_ até a casa dos vigesilhões.
- * Suporta _casas decimais_ até vigesilhões.
+Outras bibliotecas de código que podem ser úteis:
+
+- [phputil/tdatetime](https://github.com/thiagodp/TDateTime)
+- [phputil/json](https://github.com/thiagodp/json)
+- [phputil/router](https://github.com/thiagodp/router)
+- [phputil/rtti](https://github.com/thiagodp/rtti)
+- [mais...](https://packagist.org/?query=phputil%2F)
 
 ## Licença
 
