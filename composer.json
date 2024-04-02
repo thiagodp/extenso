@@ -22,6 +22,11 @@
 	"suggest": {
 	},
 	"autoload": {
-		"psr-4": { "phputil\\extenso\\": "lib/" }
+		"psr-4": {
+			"phputil\\extenso\\": "lib/"
+		},
+		"files": [
+			"lib/funcoes.php"
+		]
 	}
 }
