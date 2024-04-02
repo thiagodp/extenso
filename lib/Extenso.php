@@ -41,6 +41,23 @@ class Extenso {
 	const NUMERO_MASCULINO	= 1;
 	const NUMERO_FEMININO	= 2;
 
+	// TO-DO: Refatorar atributos para constantes ou atributo único
+	private $virgula;
+	private $separador;
+	private $conector;
+	private $centavoSingular;
+	private $centavoPlural;
+	private $moedaSingular;
+	private $moedaPlural;
+	private $trioExtensoM;
+	private $trioExtensoF;
+	private $classeExtenso;
+	private $complementoSingular;
+	private $complementoPlural;
+	private $decimais;
+	private $decimalSufixoSingular;
+	private $decimalSufixoPlural;
+
 
 	function __construct() {
 
