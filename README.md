@@ -52,10 +52,10 @@ $e->extenso( 4025800.99 );
 > ⚠ Suportado na versão 2.1 ou posterior
 
 ```php
+use phputil\extenso\extenso;
 use phputil\extenso\moeda;
 use phputil\extenso\masculino;
 use phputil\extenso\feminino;
-use phputil\extenso\extenso;
 
 extenso( 1001 );   // mil e um reais
 moeda( 1001 );     // mil e um reais
