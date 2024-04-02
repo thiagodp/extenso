@@ -2,6 +2,10 @@
 namespace phputil\extenso\tests;
 
 use phputil\extenso\Extenso;
+use function phputil\extenso\masculino;
+use function phputil\extenso\feminino;
+use function phputil\extenso\moeda;
+use function phputil\extenso\extenso;
 
 /**
  *	Tests Extenso.
@@ -86,6 +90,42 @@ class ExtensoTest extends \PHPUnit_Framework_TestCase {
 	function test_numero_feminino() {
 		$r = $this->e->extenso( 1001, Extenso::NUMERO_FEMININO );
 		$this->assertEquals( 'mil e uma', $r );
+	}
+
+	function test_funcao_masculino() {
+		$r = $this->e->extenso( 1001, Extenso::NUMERO_MASCULINO );
+		$rf = masculino( 1001 );
+		$this->assertEquals( 'mil e um', $r );
+		$this->assertEquals( $r, $rf );
+	}
+
+	function test_funcao_feminino() {
+		$r = $this->e->extenso( 1001, Extenso::NUMERO_FEMININO );
+		$rf = feminino( 1001 );
+		$this->assertEquals( 'mil e uma', $r );
+		$this->assertEquals( $r, $rf );
+	}
+
+	function test_funcao_moeda() {
+		$r = $this->e->extenso( 1001, Extenso::MOEDA );
+		$rf = moeda( 1001 );
+		$this->assertEquals( 'mil e um reais', $r );
+		$this->assertEquals( $r, $rf );
+	}
+
+	function test_funcao_extenso() {
+		$r = $this->e->extenso( 1001 );
+		$rf = extenso( 1001 );
+		$this->assertEquals( 'mil e um reais', $r );
+		$this->assertEquals( $r, $rf );
+	}
+
+	function test_funcao_extenso_com_argumento() {
+		$estilo = Extenso::NUMERO_FEMININO;
+		$r = $this->e->extenso( 1001, $estilo );
+		$rf = extenso( 1001, $estilo );
+		$this->assertEquals( 'mil e uma', $r );
+		$this->assertEquals( $r, $rf );
 	}
 
 }

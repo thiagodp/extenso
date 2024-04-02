@@ -47,6 +47,23 @@ $e->extenso( 1001.001 ); // mil e um reais e um milésimo
 $e->extenso( 4025800.99 );
 ```
 
+# Usando funções
+
+> ⚠ Suportado na versão 2.1 ou posterior
+
+```php
+use phputil\extenso\moeda;
+use phputil\extenso\masculino;
+use phputil\extenso\feminino;
+use phputil\extenso\extenso;
+
+extenso( 1001 );   // mil e um reais
+moeda( 1001 );     // mil e um reais
+masculino( 1001 ); // mil e um
+feminino( 1001 );  // mil e uma
+```
+
+
 ## Outras
 
 Outras bibliotecas de código que podem ser úteis:
