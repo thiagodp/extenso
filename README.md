@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/thiagodp/extenso.svg?branch=master&style=flat)](https://travis-ci.org/thiagodp/extenso)
-[![Version](https://poser.pugx.org/phputil/extenso/v?style=flat-square)](https://packagist.org/packages/phputil/extenso)
-[![Downloads](https://poser.pugx.org/phputil/extenso/downloads?style=flat-square)](https://packagist.org/packages/phputil/extenso)
-
+![Packagist Version](https://img.shields.io/packagist/v/phputil/extenso?style=for-the-badge&color=green)
+![GitHub License](https://img.shields.io/github/license/thiagodp/extenso?style=for-the-badge&color=green)
+![Packagist Downloads](https://img.shields.io/packagist/dt/phputil/extenso?style=for-the-badge&color=green)
+![Build](https://github.com/thiagodp/extenso/actions/workflows/ci.yml/badge.svg?style=for-the-badge&color=green)
 
 # extenso
 
