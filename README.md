@@ -5,7 +5,7 @@
 
 # extenso
 
-> Conversão de valores por extenso em PHP (>= 5.4)
+> Conversão de valores por extenso em PHP
 
 - Suporta _números_ até a casa dos vigesilhões.
 - Suporta _casas decimais_ até vigesilhões.
@@ -14,9 +14,17 @@
 
 ## Instalação
 
+Versão para PHP 8.x:
 ```bash
 composer require phputil/extenso
 ```
+
+Versão para PHP 5.4 até 7.x:
+```bash
+composer require phputil/extenso@2
+```
+
+
 
 ## Documentação
 
@@ -31,11 +39,15 @@ Estilos aceitos:
 
 ### Exemplos
 
+Uso com classe `Extenso`:
 ```php
+require_once 'vendor/autoload.php';
+
 use phputil\extenso\Extenso;
 
 $e = new Extenso();
 $e->extenso( 1001 ); // mil e um reais
+
 $e->extenso( 1001, Extenso::MOEDA ); // mil e um reais
 $e->extenso( 1001, Extenso::NUMERO_MASCULINO ); // mil e um
 $e->extenso( 1001, Extenso::NUMERO_FEMININO ); // mil e uma
@@ -47,11 +59,11 @@ $e->extenso( 1001.001 ); // mil e um reais e um milésimo
 $e->extenso( 4025800.99 );
 ```
 
-# Usando funções
-
-> ⚠ Suportado na versão 2.1 ou posterior
+Uso com funções - versão 2.1 ou posterior:
 
 ```php
+require_once 'vendor/autoload.php';
+
 use phputil\extenso\extenso;
 use phputil\extenso\moeda;
 use phputil\extenso\masculino;
@@ -64,14 +76,14 @@ feminino( 1001 );  // mil e uma
 ```
 
 
-## Outras
+## Veja também
 
-Outras bibliotecas de código que podem ser úteis:
+Bibliotecas de código que podem lhe ser úteis:
 
-- [phputil/tdatetime](https://github.com/thiagodp/TDateTime)
-- [phputil/json](https://github.com/thiagodp/json)
-- [phputil/router](https://github.com/thiagodp/router)
-- [phputil/rtti](https://github.com/thiagodp/rtti)
+- [phputil/tdatetime](https://github.com/thiagodp/TDateTime) - Manipulação de datas e horas
+- [phputil/json](https://github.com/thiagodp/json) - Manipulação de formato JSON
+- [phputil/router](https://github.com/thiagodp/router) - Construção de APIs RESTful como no ExpressJS
+- [phputil/rtti](https://github.com/thiagodp/rtti) - Extração de informações de objetos em tempo de execução
 - [mais...](https://packagist.org/?query=phputil%2F)
 
 ## Licença
